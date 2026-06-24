@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Нурофен Экспресс — быстрое действие при боли и жаре | Аптека Столички</title>
+<meta name="description" content="Нурофен Экспресс — современное средство от боли и повышенной температуры. Быстрое начало действия уже через 15 минут.">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --red: #E30613;
+    --red-dark: #B8050F;
+    --beige: #F5E6E0;
+    --dark: #1a1a1a;
+    --gray: #6b6b6b;
+    --light: #f7f7f7;
+    --white: #ffffff;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+    background: var(--white);
+  }
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+
+  /* HEADER */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+  .nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 16px 0;
+  }
+  .pharmacy-name {
+    font-weight: 700; font-size: 22px; color: var(--red);
+    letter-spacing: -0.5px;
+  }
+  .logo {
+    font-weight: 800; font-size: 20px; color: var(--red);
+    letter-spacing: -0.5px; margin-left: 30px;
+  }
+  .logo span { color: var(--dark); }
+  .nav ul { display: flex; gap: 28px; list-style: none; }
+  .nav a {
+    color: var(--dark); text-decoration: none; font-weight: 500;
+    font-size: 15px; transition: color .2s;
+  }
+  .nav a:hover { color: var(--red); }
+  .btn {
+    display: inline-block; padding: 12px 26px;
+    background: var(--red); color: var(--white);
+    text-decoration: none; border-radius: 30px;
+    font-weight: 600; font-size: 15px;
+    transition: all .25s; border: none; cursor: pointer;
+  }
+  .btn:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(227,6,19,.3); }
+  .btn-outline {
+    background: transparent; color: var(--red);
+    border: 2px solid var(--red);
+  }
+  .btn-outline:hover { background: var(--red); color: var(--white); }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #fff 0%, #ffe8ea 100%);
+    padding: 70px 0 90px;
+    position: relative; overflow: hidden;
+  }
+  .hero-grid {
+    display: grid; grid-template-columns: 1.1fr 1fr;
+    gap: 50px; align-items: center;
+  }
+  .badge {
+    display: inline-block; background: var(--red); color: var(--white);
+    padding: 6px 14px; border-radius: 20px; font-size: 13px;
+    font-weight: 600; letter-spacing: 0.5px; margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: 54px; line-height: 1.1; font-weight: 800;
+    margin-bottom: 20px; letter-spacing: -1px;
+  }
+  .hero h1 em { color: var(--red); font-style: normal; }
+  .hero p.lead {
+    font-size: 19px; color: var(--gray); margin-bottom: 30px;
+    max-width: 520px;
+  }
+  .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero-stats {
+    display: flex; gap: 40px; margin-top: 40px;
+    padding-top: 30px; border-top: 1px solid #eee;
+  }
+  .stat-num { font-size: 32px; font-weight: 800; color: var(--red); }
+  .stat-label { font-size: 14px; color: var(--gray); }
+
+  .hero-visual {
+    display: flex; justify-content: center; align-items: center;
+    position: relative;
+  }
+  .product-img {
+    width: 100%; max-width: 420px;
+    filter: drop-shadow(0 30px 40px rgba(227,6,19,.25));
+    animation: float 4s ease-in-out infinite;
+    border-radius: 20px;
+  }
+  @keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+
+  /* SECTIONS */
+  section { padding: 80px 0; }
+  .section-title {
+    text-align: center; margin-bottom: 50px;
+  }
+  .section-title h2 {
+    font-size: 40px; font-weight: 800; margin-bottom: 12px;
+    letter-spacing: -0.5px;
+  }
+  .section-title p { color: var(--gray); font-size: 17px; max-width: 600px; margin: 0 auto; }
+
+  /* FEATURES */
+  .features-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+  }
+  .feature {
+    background: var(--white); padding: 36px 28px;
+    border-radius: 18px; border: 1px solid #eee;
+    transition: all .3s;
+  }
+  .feature:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.08);
+    border-color: transparent;
+  }
+  .feature-icon {
+    width: 60px; height: 60px; border-radius: 14px;
+    background: var(--beige); display: flex; align-items: center; justify-content: center;
+    margin-bottom: 20px;
+  }
+  .feature-icon svg { width: 30px; height: 30px; stroke: var(--red); }
+  .feature h3 { font-size: 20px; margin-bottom: 10px; }
+  .feature p { color: var(--gray); font-size: 15px; }
+
+  /* INDICATIONS */
+  .indications { background: var(--light); }
+  .indications-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+  }
+  .ind-item {
+    background: var(--white); padding: 22px 26px;
+    border-radius: 14px; display: flex; align-items: center; gap: 18px;
+    border-left: 4px solid var(--red);
+    transition: transform .2s;
+  }
+  .ind-item:hover { transform: translateX(6px); }
+  .ind-number {
+    width: 48px; height: 48px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--beige) 0%, #e8d4cf 100%);
+    color: var(--red);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; font-weight: 800; flex-shrink: 0;
+    border: 2px solid var(--red);
+  }
+  .ind-item strong { display: block; font-size: 17px; margin-bottom: 2px; }
+  .ind-item span { color: var(--gray); font-size: 14px; }
+
+  /* HOW IT WORKS */
+  .steps {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;
+    position: relative;
+  }
+  .step {
+    text-align: center; padding: 30px 20px; position: relative;
+  }
+  .step-num {
+    width: 60px; height: 60px; border-radius: 50%;
+    background: var(--red); color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; font-weight: 800; margin: 0 auto 20px;
+    box-shadow: 0 10px 25px rgba(227,6,19,.3);
+  }
+  .step h3 { font-size: 20px; margin-bottom: 10px; }
+  .step p { color: var(--gray); font-size: 15px; }
+
+  /* DOSAGE */
+  .dosage { background: var(--dark); color: var(--white); }
+  .dosage .section-title h2 { color: var(--white); }
+  .dosage .section-title p { color: #bbb; }
+  .dosage-box {
+    background: #2a2a2a; border-radius: 20px; padding: 40px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+    border: 1px solid #333;
+  }
+  .dosage-box h3 { color: var(--white); margin-bottom: 16px; font-size: 22px; }
+  .dosage-box ul { list-style: none; }
+  .dosage-box li {
+    padding: 12px 0; border-bottom: 1px solid #3a3a3a;
+    display: flex; justify-content: space-between;
+    font-size: 15px;
+  }
+  .dosage-box li:last-child { border-bottom: none; }
+  .dosage-box li span:last-child { color: var(--red); font-weight: 700; }
+
+  /* CTA */
+  .cta {
+    background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+    color: var(--white); text-align: center;
+    border-radius: 24px; padding: 60px 40px;
+    margin: 0 20px;
+  }
+  .cta-wrap { padding: 80px 0; }
+  .cta h2 { font-size: 40px; font-weight: 800; margin-bottom: 16px; }
+  .cta p { font-size: 18px; opacity: .95; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
+  .cta .btn {
+    background: var(--white); color: var(--red);
+    padding: 16px 40px; font-size: 17px;
+  }
+  .cta .btn:hover { background: var(--dark); color: var(--white); }
+
+  /* FOOTER */
+  footer {
+    background: #0f0f0f; color: #999; padding: 50px 0 30px;
+    font-size: 13px; line-height: 1.7;
+  }
+  .footer-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px; margin-bottom: 30px;
+  }
+  footer h4 { color: var(--white); font-size: 15px; margin-bottom: 16px; }
+  footer a { color: #999; text-decoration: none; display: block; padding: 4px 0; }
+  footer a:hover { color: var(--red); }
+  .disclaimer {
+    background: #1a1a1a; padding: 20px; border-radius: 10px;
+    border-left: 3px solid var(--red); margin-bottom: 25px;
+    font-size: 12px; color: #aaa;
+  }
+  .copyright {
+    border-top: 1px solid #222; padding-top: 20px;
+    text-align: center; font-size: 12px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero-grid, .features-grid, .indications-grid, .steps,
+    .dosage-box, .footer-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 38px; }
+    .section-title h2, .cta h2 { font-size: 30px; }
+    .nav ul { display: none; }
+    .hero-stats { gap: 20px; flex-wrap: wrap; }
+    section { padding: 60px 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container nav">
+    <div style="display: flex; align-items: center;">
+      <div class="pharmacy-name">Столички</div>
+      <div class="logo">Нурофен<span>®</span> Экспресс</div>
+    </div>
+    <ul>
+      <li><a href="#features">Преимущества</a></li>
+      <li><a href="#indications">Показания</a></li>
+      <li><a href="#how">Как работает</a></li>
+      <li><a href="#dosage">Применение</a></li>
+    </ul>
+    <a href="#cta" class="btn">Вход</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">НОВИНКА В АПТЕКЕ</span>
+      <h1>Быстрая помощь <em>при боли и жаре</em></h1>
+      <p class="lead">Нурофен® Экспресс — современная жидкая форма ибупрофена. Начинает действовать уже через 15 минут*, возвращая вас к активной жизни.</p>
+      <div class="hero-cta">
+        <a href="#cta" class="btn">Купить в аптеке</a>
+        <a href="#how" class="btn btn-outline">Узнать больше</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">15 мин</div>
+          <div class="stat-label">начало действия*</div>
+        </div>
+        <div>
+          <div class="stat-num">до 8 ч</div>
+          <div class="stat-label">длительность эффекта</div>
+        </div>
+        <div>
+          <div class="stat-num">200 мг</div>
+          <div class="stat-label">ибупрофена в капсуле</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+        <img src="nip.jpg" alt="Нурофен Экспресс упаковка" class="product-img">
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="container">
+    <div class="section-title">
+      <h2>Почему Нурофен® Экспресс</h2>
+      <p>Современная формула для тех, кто ценит своё время и здоровье</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <h3>Быстрое начало действия</h3>
+        <p>Жидкая форма ибупрофена в капсуле начинает действовать уже через 15 минут после приёма*. Быстрее обычных таблеток.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3>Двойное действие</h3>
+        <p>Снижает повышенную температуру и устраняет боль различного происхождения: головную, зубную, мышечную, при менструации.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Длительный эффект</h3>
+        <p>Действие препарата сохраняется до 8 часов. Достаточно 3–4 приёмов в сутки для контроля симптомов.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDICATIONS -->
+<section id="indications" class="indications">
+  <div class="container">
+    <div class="section-title">
+      <h2>Показания к применению</h2>
+      <p>Нурофен® Экспресс помогает при широком спектре болевых синдромов</p>
+    </div>
+    <div class="indications-grid">
+      <div class="ind-item">
+        <div class="ind-number">1</div>
+        <div><strong>Головная боль</strong><span>Включая боль напряжения и мигрень</span></div>
+      </div>
+      <div class="ind-item">
+        <div class="ind-number">2</div>
+        <div><strong>Повышенная температура</strong><span>При простуде и гриппе у взрослых</span></div>
+      </div>
+      <div class="ind-item">
+        <div class="ind-number">3</div>
+        <div><strong>Зубная боль</strong><span>Быстрое облегчение после визита к стоматологу</span></div>
+      </div>
+      <div class="ind-item">
+        <div class="ind-number">4</div>
+        <div><strong>Боль в мышцах и спине</strong><span>После физических нагрузок и травм</span></div>
+      </div>
+      <div class="ind-item">
+        <div class="ind-number">5</div>
+        <div><strong>Менструальная боль</strong><span>Эффективное облегчение болезненных ощущений</span></div>
+      </div>
+      <div class="ind-item">
+        <div class="ind-number">6</div>
+        <div><strong>Боль в горле</strong><span>Симптоматическая терапия при ОРВИ</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="container">
+    <div class="section-title">
+      <h2>Как работает препарат</h2>
+      <p>Три простых шага к быстрому облегчению</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Оболочка растворяется</h3>
+        <p>Желатиновая капсула быстро растворяется в желудке, высвобождая жидкое содержимое.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Быстрое всасывание</h3>
+        <p>Жидкая форма ибупрофена усваивается быстрее, чем из обычных таблеток, и попадает в кровь.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Блокировка боли</h3>
+        <p>Ибупрофен подавляет выработку простагландинов — устраняет боль и снижает температуру.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOSAGE -->
+<section id="dosage" class="dosage">
+  <div class="container">
+    <div class="section-title">
+      <h2>Способ применения</h2>
+      <p>Простая и понятная схема приёма для взрослых и детей старше 12 лет</p>
+    </div>
+    <div class="dosage-box">
+      <div>
+        <h3>Режим дозирования</h3>
+        <ul>
+          <li><span>Разовая доза</span><span>1 капсула (200 мг)</span></li>
+          <li><span>Интервал между приёмами</span><span>не менее 4 часов</span></li>
+          <li><span>Максимум в сутки</span><span>не более 3 капсул</span></li>
+          <li><span>Способ приёма</span><span>внутрь, запивая водой</span></li>
+          <li><span>Длительность без консультации</span><span>не более 4–5 дней</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Важно знать</h3>
+        <ul>
+          <li><span>Возраст</span><span>с 12 лет</span></li>
+          <li><span>Приём пищи</span><span>после еды</span></li>
+          <li><span>Беременность</span><span>противопоказан</span></li>
+          <li><span>Язвенная болезнь</span><span>противопоказан</span></li>
+          <li><span>Перед применением</span><span>консультируйтесь с врачом</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-wrap">
+  <div class="container">
+    <div id="cta" class="cta">
+      <h2>Найдите Нурофен® Экспресс в ближайшей аптеке</h2>
+      <p>Препарат доступен без рецепта в аптечных сетях по всей России. Сохраните здоровье — действуйте быстро!</p>
+      <a href="#" class="btn">Найти аптеку рядом</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="disclaimer">
+      <strong>Информация для потребителей.</strong> Имеются противопоказания. Перед применением необходимо ознакомиться с инструкцией по медицинскому применению лекарственного препарата Нурофен® Экспресс и проконсультироваться со специалистом. РУ ЛП-000000 от 00.00.0000. *Начало действия — время достижения максимальной концентрации в плазме крови. ООО «Рекитт Бенкизер Хелскер», Россия, 150040, г. Ярославль, ул. Тухачевского, д. 24/14. Реклама.
+    </div>
+    <div class="footer-grid">
+      <div>
+        <div class="pharmacy-name" style="margin-bottom: 12px; color: var(--white);">Столички</div>
+        <p>Современное средство от боли и повышенной температуры на основе ибупрофена в жидкой форме.</p>
+      </div>
+      <div>
+        <h4>Разделы</h4>
+        <a href="#features">Преимущества</a>
+        <a href="#indications">Показания</a>
+        <a href="#how">Как работает</a>
+        <a href="#dosage">Применение</a>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <a href="tel:88000000000">8 (800) 000-00-00</a>
+        <a href="mailto:info@example.ru">info@example.ru</a>
+        <a href="#">Инструкция (PDF)</a>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 Нурофен® Экспресс. Аптека Столички. Демонстрационный макет для учебной задачи «Аптека». Все права защищены.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
